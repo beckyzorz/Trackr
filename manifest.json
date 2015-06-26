@@ -1,0 +1,36 @@
+// Browser or page action
+// Content scripts
+// Background script
+// Utility web files
+
+// chrome.extension.*
+//chrome.browserAction.*
+// chrome.pageAction.*
+// chrome.windows.*
+// chrome.tabs.*
+// chrome.bookmarks.*
+
+{
+    "manifest_version": 2,
+    "name": "Trackr",
+    "version": "0.01",
+    "description": "A button that shows an overview of all your dashboard, AMP and other issues.", 
+    // "default_locale": "en",
+    "icons" : {"size":"file"},
+    
+      "page_action": {
+          "default_icon": {                    // optional
+            "19": "images/icon19.png",           // optional
+            "38": "images/icon38.png"            // optional
+          },
+          "default_title": "Trackr",      // optional; shown in tooltip
+          "default_popup": "popup.html"        // optional
+        }
+        
+        "permissions": [
+          "tabs",
+          "background",
+          "http://*.google.com/",
+          "unlimitedStorage"
+        ],
+}
